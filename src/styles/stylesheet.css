@@ -33,9 +33,11 @@ body:-moz-full-screen {
 }*/
 .slide-appear {
   /*opacity    : 0;*/
-  -webkit-animation: slideIn 2s forwards;
-  -moz-animation: slideIn 2s forwards;
-  animation: slideIn 2s forwards;
+  -webkit-animation: slideIn 1s forwards;
+  -moz-animation: slideIn 1s forwards;
+  -webkit-animation-timing-function : linear;
+  animation: slideIn 1s forwards;
+  animation-timing-function : linear;
 }
 
 .slide-appear.slide-appear-active {
@@ -44,9 +46,11 @@ body:-moz-full-screen {
 
 .slide-enter {
   /*max-height : 0;*/
-  -webkit-animation: slideIn 2s forwards;
-  -moz-animation: slideIn 2s forwards;
-  animation: slideIn 2s forwards;
+  -webkit-animation: slideIn 1s forwards;
+  -moz-animation: slideIn 1s forwards;
+  -webkit-animation-timing-function : linear;
+  animation: slideIn 1s forwards;
+  animation-timing-function : linear;
 }
 
 .slide-enter.slide-enter-active {
@@ -55,9 +59,11 @@ body:-moz-full-screen {
 
 .slide-leave {
   /*max-height : 1000px;*/
-  -webkit-animation: slideIn 2s forwards;
-  -moz-animation: slideIn 2s forwards;
-  animation: slideIn 2s forwards;
+  -webkit-animation: slideIn 1s forwards;
+  -moz-animation: slideIn 1s forwards;
+  -webkit-animation-timing-function : linear;
+  animation: slideIn 1s forwards;
+  animation-timing-function : linear;
 }
 
 .slide-leave.slide-leave-active {
@@ -89,17 +95,13 @@ body:-moz-full-screen {
   }
 }
 
-
-
-
-
-
-
 .slide1-appear {
   /*opacity    : 0;*/
-  -webkit-animation: slideOut 2s forwards;
-  -moz-animation: slideOut 2s forwards;
-  animation: slideOut 2s forwards;
+  -webkit-animation: slideOut 1s forwards;
+  -moz-animation: slideOut 1s forwards;
+  -webkit-animation-timing-function : linear;
+  animation: slideOut 1s forwards;
+  animation-timing-function : linear;
 }
 
 .slide1-appear.slide1-appear-active {
@@ -108,9 +110,11 @@ body:-moz-full-screen {
 
 .slide1-enter {
   /*max-height : 0;*/
-  -webkit-animation: slideOut 2s forwards;
-  -moz-animation: slideOut 2s forwards;
-  animation: slideOut 2s forwards;
+  -webkit-animation: slideOut 1s forwards;
+  -moz-animation: slideOut 1s forwards;
+  -webkit-animation-timing-function : linear;
+  animation: slideOut 1s forwards;
+  animation-timing-function : linear;
 }
 
 .slide1-enter.slide1-enter-active {
@@ -119,9 +123,11 @@ body:-moz-full-screen {
 
 .slide1-leave {
   /*max-height : 1000px;*/
-  -webkit-animation: slideOut 2s forwards;
-  -moz-animation: slideOut 2s forwards;
-  animation: slideOut 2s forwards;
+  -webkit-animation: slideOut 1s forwards;
+  -moz-animation: slideOut 1s forwards;
+  -webkit-animation-timing-function : linear;
+  animation: slideOut 1s forwards;
+  animation-timing-function : linear;
 }
 
 .slide1-leave.slide1-leave-active {

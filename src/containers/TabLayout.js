@@ -17,6 +17,7 @@ require('velocity-animate/velocity.ui');
 var effects1 = ['slideLeft','slideRight', 'fade'];
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
+
 const tabs      = ["Mobile Verification", "Seller Information",  "Tax Details",  "Payment Details",  "Point of Contact", "Additional Information", "Terms & Conditions"];
 const tabPanels = [     VerifyOtp,            SellerInfo,          TaxDetails,    PaymentDetails,       POCDetails,            AddInfo,                    TnC];
 
@@ -37,8 +38,7 @@ class TabLayout extends Component {
   }
   
   renderTabPanels(item, index) {
-    
-    if(this.props.prevTabIndex<=this.props.currentTab ){
+    if(this.props.prevTabIndex<=this.props.currentTab){
       var animation = "slide";
     }
     else
@@ -60,9 +60,7 @@ class TabLayout extends Component {
       </TabPanel>
     );
   }
-  showTabPanels(){
-    document.getElementsByClassName("pt-tab-panel").style.display = "block";
-  }
+  
   componentWillMount(){
     const script = document.createElement("script");
 
@@ -81,7 +79,6 @@ class TabLayout extends Component {
 
   render() {
     return(           
-      
         <Tabs className="tabs1" selectedTabIndex={this.props.currentTab} onChange={this.handleTabChange}>
           <TabList className="pt-large" style={{padding: "0px 20px 0px 20px"}}>
             {tabs.map(this.renderTabs)}
