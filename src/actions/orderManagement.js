@@ -14,6 +14,7 @@ const fillOrders = (orders) => {
   }
 }
 
+
 export const fetchOrders = (sellerId, type, orderBy, from, to, category, search_text, page) => {
   return function(dispatch){
     let url = constants.fetchOrders;
@@ -55,5 +56,32 @@ export const toggleOrderSelected = ( index, value ) => {
       index: index,
       value: value
     }
+  }
+}
+
+const dispatchOrders = (orders) => {
+  console.log("Inside dispatchOrders");
+  console.log(orders);
+  return{
+    type: FETCH_ORDERS,
+    payload: {
+      orders
+    }
+  }
+}
+
+export const updateDispatchOrders = (orders) => {
+  return function(dispatch){
+    let url = constants.fetchOrders;
+    return fetch(url, {
+      method: 'get',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      }
+    })
+    .then(checkHttpStatus)
+    .then(parseJSON)
+    .then( response => { dispatch(fillOrders(response)); })
+    .catch( error => { console.log("Failed to fetch orders ", error); })
   }
 }
